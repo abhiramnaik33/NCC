@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>GMIT NCC | National Cadet Corps</title>
+        <link rel="icon" type="image/png" href="NCC-1-2-removebg-preview.png">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="annualreport.css">
+        <style>
+            
+    .reports-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .report-card {
+        width: 250px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .report-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .report-image {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .report-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .report-image::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+    
+    .report-info {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .report-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #003366;
+    }
+    
+    .download-btn {
+        display: inline-block;
+        background-color: #e63946;
+        color: white;
+        text-decoration: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .download-btn:hover {
+        background-color: #c1121f;
+    }  
+    
+            </style>
+    </head>
+    <body>
+        <HEADER>
+ 
+   
+            <div class="top-header">
+              <div class="logo-container">
+                <a href="index.html">
+                  <img src="NCC logo1.png" alt="NCC Logo"> 
+                  </a>
+                  <div class="logo-text">
+                      <h1>राष्ट्रीय कैडेट कोर | National Cadet Corps</h1>
+                      <p>3 Kar Engr COY, Bellary Group, Kar&Goa Directrate, Davangere</p>
+                  </div>
+              </div>
+              <div class="right-logo">
+                  <img src="NCC logo2.png" alt="Right Logo">
+              </div>
+          </div>
+          
+          <!-- Main Navigation -->
+          <nav class="main-nav">
+              <div class="site-info">
+                  <div class="site-title">GM Institue of Technology</div>
+                  
+              </div>
+      
+              <nav class="main-nav">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-links">
+                    <!-- About NCC -->
+                    <div class="nav-item">
+                        <a href="#ncc-container" class="nav-link">About NCC</a>
+                    </div>
+                    
+                    <!-- Activities -->
+                    <div class="nav-item">
+                        <a href="annualreport.html" class="nav-link">Annual Report</a>
+                    </div>
+                    
+                    <!-- Unit -->
+                    <div class="nav-item">
+                        <a href="unit.html" class="nav-link">Unit</a>
+                        
+                    </div>
+                    
+                    <!-- HEAD -->
+                    <div class="nav-item">
+                        <a href="head.html" class="nav-link">HEAD</a>
+                    </div>
+                    
+                    <!-- EX-CADETS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">EX-CADETS</a>
+                        <div class="dropdown">
+                            <a href="Batch-24.html">Batch-24</a>
+                            <a href="Batch-25.html">Batch-25</a>
+                        </div>
+                    </div>
+                    
+                    <!-- CADETS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">CADETS</a>
+                        <div class="dropdown">
+                          <a href="Batch-26.html">Batch-26</a>
+                          <a href="Batch-27.html">Batch-27</a>
+                        </div>
+                    </div>
+                    
+      
+      
+      
+                    <BR>
+                    <!-- ACHIEVEMENTS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">ACHIEVEMENTS</a>
+                        <div class="dropdown">
+                            <a href="clg_achivements.html">College</a>
+                            <a href="unit_achivements.html">Unit</a>
+                            <a href="camp_achivements.html">Camp</a>
+                        </div>
+                    </div>
+                    
+                    <!-- TRAINING CAMPS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">TRAINING</a>
+                        <div class="dropdown">
+                            <a href="certificates.html">Certificates</a>
+                            <a href="camps.html">Camps</a>
+                        </div>
+                    </div>
+                    
+                   
+                    <!-- RULES & REGULATIONS -->
+                    <div class="nav-item">
+                        <a href="terms.html" class="nav-link"> T & C</a>
+                  
+                    </div>
+                  
+                    
+                    <!-- NCC OFFICE -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">NCC OFFICE</a>
+                    </div>
+      
+                    <div class="nav-item">
+                        <a href="#footer-column" class="nav-link">Contact us</a>
+                    </div>
+                </div>
+      
+            </nav>
+          
+        </HEADER>
+      
+              
+        
+        <br>
+        <br>
+        <br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC Leadership</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Matching the NCC style from image */
+        .section-header {
+            color: #e63946;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .section-underline {
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: #e63946;
+            margin-bottom: 25px;
+        }
+
+        /* CO Section Styling */
+        .co-section {
+            background-color: white;
+            border-radius: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .co-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6a85b6, #e63946, #6a85b6);
+        }
+        
+        .co-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6a85b6, #e63946, #6a85b6);
+        }
+
+        .co-photo {
+            flex: 0 0 30%;
+            max-width: 300px;
+            margin-right: 40px;
+            margin-bottom: 20px;
+        }
+
+        .co-photo img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .co-message {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .co-message h2 {
+            color: #e63946;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e63946;
+            font-size: 28px;
+        }
+
+        .co-name {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #14213d;
+        }
+
+        .co-designation {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* PI Staff Section */
+        .staff-section {
+            background-color: white;
+            border-radius: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 50px;
+            position: relative;
+        }
+        
+        .staff-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6a85b6, #e63946, #6a85b6);
+        }
+        
+        .staff-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6a85b6, #e63946, #6a85b6);
+        }
+
+        .section-title {
+            color: #e63946;
+            text-align: left;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            font-size: 28px;
+            border-bottom: 2px solid #e63946;
+            width: 50%;
+        }
+
+        .staff-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .staff-card {
+            flex: 0 0 calc(25% - 30px);
+            min-width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .staff-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 3px solid #e63946;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .staff-name {
+            font-weight: bold;
+            color: #14213d;
+            margin-bottom: 5px;
+        }
+
+        .staff-role {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .co-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .co-photo {
+                margin-right: 0;
+            }
+            
+            .staff-card {
+                flex: 0 0 calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .staff-card {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Commanding Officer Section -->
+        <div class="co-section">
+            <div class="co-photo">
+                <!-- Replace with actual CO photo -->
+                <img src="/api/placeholder/300/400" alt="Commanding Officer">
+            </div>
+            <div class="co-message">
+                <div class="section-header">Message from the Commanding Officer</div>
+                <span class="section-underline"></span>
+                <p>
+                    Welcome to our National Cadet Corps unit. As the Commanding Officer, I am proud to lead this exceptional 
+                    group of young cadets who represent the future of our nation. The NCC stands for discipline, leadership, 
+                    and patriotism, values that we strive to instill in each cadet.
+                </p>
+                <p>
+                    Our training program is designed to develop character, comradeship, discipline, leadership, secular outlook, 
+                    spirit of adventure, and the ideals of selfless service among the youth of our country. We are committed to 
+                    providing experiences that will help shape our cadets into responsible citizens and future leaders.
+                </p>
+                <p>
+                    I encourage all cadets to embrace the opportunities provided by the NCC and to live by our motto of 
+                    "Unity and Discipline" (Ekta aur Anushasan).
+                </p>
+                <div class="co-name">Col. Rajesh Kumar</div>
+                <div class="co-designation">Commanding Officer, NCC Unit</div>
+            </div>
+        </div>
+
+        <!-- PI Staff Section -->
+        <div class="staff-section">
+            <div class="section-header">Permanent Instructional Staff</div>
+            <span class="section-underline"></span>
+            <div class="staff-container">
+                <!-- PI Staff Member 1 -->
+                <div class="staff-card">
+                    <img src="/api/placeholder/180/180" alt="Staff Member" class="staff-photo">
+                    <div class="staff-name">Sub. Maj. Vikram Singh</div>
+                    <div class="staff-role">Senior JCO</div>
+                </div>
+
+                <!-- PI Staff Member 2 -->
+                <div class="staff-card">
+                    <img src="/api/placeholder/180/180" alt="Staff Member" class="staff-photo">
+                    <div class="staff-name">Naib Sub. Priya Verma</div>
+                    <div class="staff-role">Administrative Officer</div>
+                </div>
+
+                <!-- PI Staff Member 3 -->
+                <div class="staff-card">
+                    <img src="/api/placeholder/180/180" alt="Staff Member" class="staff-photo">
+                    <div class="staff-name">Havildar Amit Kumar</div>
+                    <div class="staff-role">Training NCO</div>
+                </div>
+
+                <!-- PI Staff Member 4 -->
+                <div class="staff-card">
+                    <img src="/api/placeholder/180/180" alt="Staff Member" class="staff-photo">
+                    <div class="staff-name">Lance Naik Suresh Rao</div>
+                    <div class="staff-role">Quarter Master</div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Footer -->
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>GMIT NCC Unit</h3>
+            <p>The pride of GM Institute of Technology, training cadets to become responsible citizens and future leaders of India.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gmit_ncc_24?igsh=aGdrbzVhcTJ5dzBl"target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">Back to top</a></li>
+                <li><a href="gallery.html"target="_blank">Gallery</a></li>
+                <li><a href="https://indiancc.nic.in/"target="_blank">NCC official Website</a></li>
+                <li><a href="https://www.gmit.ac.in/" target="_blank">GMIT Website</a></li>
+
+            </ul>
+        </div>
+        
+        <div class="footer-column" id="footer-column">
+            <h3>Contact Information</h3>
+            <ul class="contact-info">
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>GM Institute of Technology ,<br>P.B. Road, Davanagere,<br>Davangere - 577006, Karnataka</span>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9738586827</span>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>gmitncc2024@gmail.com</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 GMIT NCC Unit. All Rights Reserved.</p>
+        <p class="love-text">Designed and Developed with <span class="heart">❤</span> <a href="developer.html">Love</a></p>
+    </div>
+</footer>
+</body>
+</html>

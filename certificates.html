@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>GMIT NCC | National Cadet Corps</title>
+        <link rel="icon" type="image/png" href="NCC-1-2-removebg-preview.png">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="annualreport.css">
+        <style>
+            
+    .reports-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .report-card {
+        width: 250px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .report-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .report-image {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .report-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .report-image::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+    
+    .report-info {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .report-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #003366;
+    }
+    
+    .download-btn {
+        display: inline-block;
+        background-color: #e63946;
+        color: white;
+        text-decoration: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .download-btn:hover {
+        background-color: #c1121f;
+    }  
+    
+            </style>
+    </head>
+    <body>
+        <HEADER>
+ 
+   
+            <div class="top-header">
+              <div class="logo-container">
+                <a href="index.html">
+                  <img src="NCC logo1.png" alt="NCC Logo"> 
+                  </a>
+                  <div class="logo-text">
+                      <h1>राष्ट्रीय कैडेट कोर | National Cadet Corps</h1>
+                      <p>3 Kar Engr COY, Bellary Group, Kar&Goa Directrate, Davangere</p>
+                  </div>
+              </div>
+              <div class="right-logo">
+                  <img src="NCC logo2.png" alt="Right Logo">
+              </div>
+          </div>
+          
+          <!-- Main Navigation -->
+          <nav class="main-nav">
+              <div class="site-info">
+                  <div class="site-title">GM Institue of Technology</div>
+                  
+              </div>
+      
+              <nav class="main-nav">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-links">
+                    <!-- About NCC -->
+                    <div class="nav-item">
+                        <a href="#ncc-container" class="nav-link">About NCC</a>
+                    </div>
+                    
+                    <!-- Activities -->
+                    <div class="nav-item">
+                        <a href="annualreport.html" class="nav-link">Annual Report</a>
+                    </div>
+                    
+                    <!-- Unit -->
+                    <div class="nav-item">
+                        <a href="unit.html" class="nav-link">Unit</a>
+                        
+                    </div>
+                    
+                    <!-- HEAD -->
+                    <div class="nav-item">
+                        <a href="head.html" class="nav-link">HEAD</a>
+                    </div>
+                    
+                    <!-- EX-CADETS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">EX-CADETS</a>
+                        <div class="dropdown">
+                            <a href="Batch-24.html">Batch-24</a>
+                            <a href="Batch-25.html">Batch-25</a>
+                        </div>
+                    </div>
+                    
+                    <!-- CADETS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">CADETS</a>
+                        <div class="dropdown">
+                          <a href="Batch-26.html">Batch-26</a>
+                          <a href="Batch-27.html">Batch-27</a>
+                        </div>
+                    </div>
+                    
+      
+      
+      
+                    <BR>
+                    <!-- ACHIEVEMENTS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">ACHIEVEMENTS</a>
+                        <div class="dropdown">
+                            <a href="clg_achivements.html">College</a>
+                            <a href="unit_achivements.html">Unit</a>
+                            <a href="camp_achivements.html">Camp</a>
+                        </div>
+                    </div>
+                    
+                    <!-- TRAINING CAMPS -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">TRAINING</a>
+                        <div class="dropdown">
+                            <a href="certificates.html">Certificates</a>
+                            <a href="camps.html">Camps</a>
+                        </div>
+                    </div>
+                    
+                   
+                    <!-- RULES & REGULATIONS -->
+                    <div class="nav-item">
+                        <a href="terms.html" class="nav-link"> T & C</a>
+                  
+                    </div>
+                  
+                    
+                    <!-- NCC OFFICE -->
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">NCC OFFICE</a>
+                    </div>
+      
+                    <div class="nav-item">
+                        <a href="#footer-column" class="nav-link">Contact us</a>
+                    </div>
+                </div>
+      
+            </nav>
+          
+        </HEADER>
+      
+              
+        
+        <br>
+        <br>
+        <br>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NCC Certification Programme</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      text-align: center;
+      color: #b91c1c;
+      margin-bottom: 15px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      background-color: #e2e8f0;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #1e3a8a;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-button.active {
+      background-color: #1e3a8a;
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .accordion {
+      background-color: #e2e8f0;
+      color: #1e3a8a;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .accordion.active {
+      background-color: #cbd5e1;
+    }
+
+    .panel {
+      background-color: white;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+      padding: 0 15px;
+      border-left: 4px solid #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .panel.open {
+      padding: 15px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .info-box {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #2563eb;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .note {
+      font-size: 14px;
+      color: #555;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    .footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h2 class="section-title">Certification Programme</h2>
+
+    <p>The eligibility conditions and the procedures for the Certificate Examination for Cadets of Senior and Junior Division/Wing NCC (All wings) are as follows:</p>
+
+    <div class="tabs">
+      <button class="tab-button active" data-tab="tab-a">Certificate A</button>
+      <button class="tab-button" data-tab="tab-b">Certificate B</button>
+      <button class="tab-button" data-tab="tab-c">Certificate C</button>
+    </div>
+
+    <!-- Tab A -->
+    <div class="tab-content active" id="tab-a">
+      <button class="accordion">Eligibility for Certificate A (Junior Division)</button>
+      <div class="panel">
+        <ul>
+          <li>Must be in the second year of NCC.</li>
+          <li>Must have attended an Annual Training Camp.</li>
+          <li>Must have attended at least 75% of total training periods.</li>
+          <li>Break in service must not exceed 12 months.</li>
+          <li>If exceeded:
+            <p class="note">"On rolls for 2 years and attended 75% training, must attend additional 45 periods."</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tab B -->
+    <div class="tab-content" id="tab-b">
+      <button class="accordion">Eligibility for Certificate B (Senior Division)</button>
+      <div class="panel">
+        <ul>
+          <li>Must be in the second year of SD/SW NCC training.</li>
+          <li>Must have attended an Annual Training Camp/NIC/Attachment Training.</li>
+          <li>10 bonus marks for cadets with 'A' certificate.</li>
+          <li>Must have 75% attendance.</li>
+          <li>Break must not exceed 18 months.</li>
+          <li>If exceeded:
+            <p class="note">"If on rolls for 2 years and 75% attendance, then eligible."</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tab C -->
+    <div class="tab-content" id="tab-c">
+      <button class="accordion">Eligibility for Certificate C (Senior Division)</button>
+      <div class="panel">
+        <ul>
+          <li>Must have passed 'B' Certificate.</li>
+          <li>Must be in the 2nd or 3rd year of training.</li>
+          <li>Must attend 75% of 3rd year syllabus.</li>
+          <li>Break not exceeding 18 months.</li>
+          <li>If exceeded:
+            <p class="note">"On rolls for 2 years and 75% attendance, additional training required."</p>
+          </li>
+          <li>Must have attended two Camps.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Additional Info -->
+    <h2 class="section-title">Additional Information</h2>
+    <div class="info-box">
+      <h3>Permission after Discharge</h3>
+      <p>Cadets who left NCC may appear for exams within 12 months at their own expense if they were otherwise eligible.</p>
+    </div>
+    <div class="info-box">
+      <h3>Re-Test for 'C' Certificate</h3>
+      <ul>
+        <li>Cadets with 'C' grade in 'C' Certificate can re-test once.</li>
+        <li>Must reappear for the full exam.</li>
+      </ul>
+    </div>
+  </main>
+
+  <br>
+          <br>
+          <br>
+          <br>
+  
+          <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GMIT NCC Unit</h3>
+                    <p>The pride of GM Institute of Technology, training cadets to become responsible citizens and future leaders of India.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/gmit_ncc_24?igsh=aGdrbzVhcTJ5dzBl"target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Back to top</a></li>
+                        <li><a href="gallery.html"target="_blank">Gallery</a></li>
+                        <li><a href="https://indiancc.nic.in/"target="_blank">NCC official Website</a></li>
+                        <li><a href="https://www.gmit.ac.in/" target="_blank">GMIT Website</a></li>
+    
+                    </ul>
+                </div>
+                
+                <div class="footer-column" id="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>GM Institute of Technology ,<br>P.B. Road, Davanagere,<br>Davangere - 577006, Karnataka</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9738586827</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>gmitncc2024@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMIT NCC Unit. All Rights Reserved.</p>
+                <p class="love-text">Designed and Developed with <span class="heart">❤</span> <a href="developer.html">Love</a></p>
+            </div>
+        </footer>
+
+  <script>
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Accordion functionality
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.classList.remove('open');
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
