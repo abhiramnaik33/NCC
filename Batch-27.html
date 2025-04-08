@@ -1,217 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>GMIT NCC | National Cadet Corps</title>
-        <link rel="icon" type="image/png" href="NCC-1-2-removebg-preview.png">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="annualreport.css">
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>NCC Batch 27 Cadets</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .header h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 3px;
+            background: linear-gradient(to right, #6b7280, #ef4444, #6b7280);
+        }
+        
+        .gradient-border {
+            height: 8px;
+            background: linear-gradient(to right, #6b7280, #ef4444, #6b7280);
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .cadets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 35px;
+            justify-items: center;
+            padding: 20px 0;
+        }
+        
+        .cadet {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .cadet:hover {
+            transform: translateY(-5px);
+        }
+        
+        .cadet-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+            background-color: #e5e7eb;
+        }
+        
+        .cadet-name {
+            font-weight: 600;
+            color: #374151;
+            font-size: 1rem;
+        }
+        
+     
+
+        @media (max-width: 768px) {
+            .cadets-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 25px;
+            }
             
-    .reports-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-    
-    .report-card {
-        width: 250px;
-        background-color: white;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .report-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    
-    .report-image {
-        height: 320px;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .report-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .report-image::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30%;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    }
-    
-    .report-info {
-        padding: 15px;
-        text-align: center;
-    }
-    
-    .report-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: #003366;
-    }
-    
-    .download-btn {
-        display: inline-block;
-        background-color: #e63946;
-        color: white;
-        text-decoration: none;
-        padding: 8px 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-    
-    .download-btn:hover {
-        background-color: #c1121f;
-    }  
-    
-            </style>
-    </head>
-    <body>
-        <HEADER>
+            .cadet-photo {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <HEADER>
  
    
-            <div class="top-header">
-              <div class="logo-container">
-                <a href="index.html">
-                  <img src="NCC logo1.png" alt="NCC Logo"> 
-                  </a>
-                  <div class="logo-text">
-                      <h1>राष्ट्रीय कैडेट कोर | National Cadet Corps</h1>
-                      <p>3 Kar Engr COY, Bellary Group, Kar&Goa Directrate, Davangere</p>
-                  </div>
-              </div>
-              <div class="right-logo">
-                  <img src="NCC logo2.png" alt="Right Logo">
+        <div class="top-header">
+          <div class="logo-container">
+            <a href="index.html">
+              <img src="NCC logo1.png" alt="NCC Logo"> 
+              </a>
+              <div class="logo-text">
+                  <h1>राष्ट्रीय कैडेट कोर | National Cadet Corps</h1>
+                  <p>3 Kar Engr COY, Bellary Group, Kar&Goa Directrate, Davangere</p>
               </div>
           </div>
-          
-          <!-- Main Navigation -->
+          <div class="right-logo">
+              <img src="NCC logo2.png" alt="Right Logo">
+          </div>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav class="main-nav">
+          <div class="site-info">
+              <div class="site-title">GM Institue of Technology</div>
+              
+          </div>
+  
           <nav class="main-nav">
-              <div class="site-info">
-                  <div class="site-title">GM Institue of Technology</div>
-                  
-              </div>
-      
-              <nav class="main-nav">
-                <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <!-- About NCC -->
+                <div class="nav-item">
+                    <a href="#ncc-container" class="nav-link">About NCC</a>
+                </div>
                 
-                <div class="nav-links">
-                    <!-- About NCC -->
-                    <div class="nav-item">
-                        <a href="#ncc-container" class="nav-link">About NCC</a>
-                    </div>
+                <!-- Activities -->
+                <div class="nav-item">
+                    <a href="annualreport.html" class="nav-link">Annual Report</a>
+                </div>
+                
+                <!-- Unit -->
+                <div class="nav-item">
+                    <a href="unit.html" class="nav-link">Unit</a>
                     
-                    <!-- Activities -->
-                    <div class="nav-item">
-                        <a href="annualreport.html" class="nav-link">Annual Report</a>
-                    </div>
-                    
-                    <!-- Unit -->
-                    <div class="nav-item">
-                        <a href="unit.html" class="nav-link">Unit</a>
-                        
-                    </div>
-                    
-                    <!-- HEAD -->
-                    <div class="nav-item">
-                        <a href="head.html" class="nav-link">HEAD</a>
-                    </div>
-                    
-                    <!-- EX-CADETS -->
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">EX-CADETS</a>
-                        <div class="dropdown">
-                            <a href="Batch-24.html">Batch-24</a>
-                            <a href="Batch-25.html">Batch-25</a>
-                        </div>
-                    </div>
-                    
-                    <!-- CADETS -->
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">CADETS</a>
-                        <div class="dropdown">
-                          <a href="Batch-26.html">Batch-26</a>
-                          <a href="Batch-27.html">Batch-27</a>
-                        </div>
-                    </div>
-                    
-      
-      
-      
-                    <BR>
-                    <!-- ACHIEVEMENTS -->
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">ACHIEVEMENTS</a>
-                        <div class="dropdown">
-                            <a href="clg_achivements.html">College</a>
-                            <a href="unit_achivements.html">Unit</a>
-                            <a href="camp_achivements.html">Camp</a>
-                        </div>
-                    </div>
-                    
-                    <!-- TRAINING CAMPS -->
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">TRAINING</a>
-                        <div class="dropdown">
-                            <a href="certificates.html">Certificates</a>
-                            <a href="camps.html">Camps</a>
-                        </div>
-                    </div>
-                    
-                   
-                    <!-- RULES & REGULATIONS -->
-                    <div class="nav-item">
-                        <a href="terms.html" class="nav-link"> T & C</a>
-                  
-                    </div>
-                  
-                    
-                    <!-- NCC OFFICE -->
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">NCC OFFICE</a>
-                    </div>
-      
-                    <div class="nav-item">
-                        <a href="#footer-column" class="nav-link">Contact us</a>
+                </div>
+                
+                <!-- HEAD -->
+                <div class="nav-item">
+                    <a href="head.html" class="nav-link">HEAD</a>
+                </div>
+                
+                <!-- EX-CADETS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">EX-CADETS</a>
+                    <div class="dropdown">
+                        <a href="Batch-24.html">Batch-24</a>
+                        <a href="Batch-25.html">Batch-25</a>
                     </div>
                 </div>
-      
-            </nav>
-          
-        </HEADER>
-      
+                
+                <!-- CADETS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">CADETS</a>
+                    <div class="dropdown">
+                      <a href="Batch-26.html">Batch-26</a>
+                      <a href="Batch-27.html">Batch-27</a>
+                    </div>
+                </div>
+                
+  
+  
+  
+                <BR>
+                <!-- ACHIEVEMENTS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">ACHIEVEMENTS</a>
+                    <div class="dropdown">
+                        <a href="clg_achivements.html">College</a>
+                        <a href="unit_achivements.html">Unit</a>
+                        <a href="camp_achivements.html">Camp</a>
+                    </div>
+                </div>
+                
+                <!-- TRAINING CAMPS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">TRAINING</a>
+                    <div class="dropdown">
+                        <a href="certificates.html">Certificates</a>
+                        <a href="camps.html">Camps</a>
+                    </div>
+                </div>
+                
+               
+                <!-- RULES & REGULATIONS -->
+                <div class="nav-item">
+                    <a href="terms.html" class="nav-link"> T & C</a>
               
-        
-        <br>
-        <br>
-        <br>
-<body>
+                </div>
+              
+                
+                <!-- NCC OFFICE -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">NCC OFFICE</a>
+                </div>
+  
+                <div class="nav-item">
+                    <a href="#footer-column" class="nav-link">Contact us</a>
+                </div>
+            </div>
+  
+        </nav>
+      
+    </HEADER>
+  
     <div class="container">
         <div class="gradient-border"></div>
         <div class="header">
-            <h1>Batch 24</h1>
+            <h1>Batch 27</h1>
         </div>
         
         <div class="cadets-grid">
@@ -229,11 +246,83 @@
                 <div class="cadet-photo"></div>
                 <p class="cadet-name">Aisha Khan</p>
             </div>
+            <div class="cadet">
+                <div class="cadet-photo"></div>
+                <p class="cadet-name">Arjun Singh</p>
+            </div>
+            <div class="cadet">
+                <div class="cadet-photo"></div>
+                <p class="cadet-name">Priya Sharma</p>
+            </div>
+            <!-- ... (all 20 cadet entries) ... -->
+            <div class="cadet">
+                <div class="cadet-photo"></div>
+                <p class="cadet-name">Aisha Khan</p>
+            </div>
+            <div class="cadet">
+                <div class="cadet-photo"></div>
+                <p class="cadet-name">Arjun Singh</p>
+            </div>
+            <div class="cadet">
+                <div class="cadet-photo"></div>
+                <p class="cadet-name">Priya Sharma</p>
+            </div>
+            <!-- ... (all 20 cadet entries) ... -->
+            <div class="cadet">
+                <div class="cadet-photo"></div>
+                <p class="cadet-name">Aisha Khan</p>
+            </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <div class="gradient-border"></div>
         
-        <div class="footer">
-            <p>&copy; 2025 Government Model Institute of Technology - National Cadet Corps Unit</p>
-        </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GMIT NCC Unit</h3>
+                    <p>The pride of GM Institute of Technology, training cadets to become responsible citizens and future leaders of India.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/gmit_ncc_24?igsh=aGdrbzVhcTJ5dzBl"target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Back to top</a></li>
+                        <li><a href="gallery.html"target="_blank">Gallery</a></li>
+                        <li><a href="https://indiancc.nic.in/"target="_blank">NCC official Website</a></li>
+                        <li><a href="https://www.gmit.ac.in/" target="_blank">GMIT Website</a></li>
+    
+                    </ul>
+                </div>
+                
+                <div class="footer-column" id="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>GM Institute of Technology ,<br>P.B. Road, Davanagere,<br>Davangere - 577006, Karnataka</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9738586827</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>gmitncc2024@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMIT NCC Unit. All Rights Reserved.</p>
+                <p class="love-text">Designed and Developed with <span class="heart">❤</span> <a href="developer.html">Love</a></p>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
