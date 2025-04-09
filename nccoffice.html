@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>NCC Leadership</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Matching the NCC style from image */
+        .section-header {
+            color: #e63946;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .section-underline {
+            display: block;
+            width: 50%;
+            height: 2px;
+            background-color: #e63946;
+            margin-bottom: 25px;
+        }
+
+        /* CO Section Styling */
+        .co-section {
+            background-color: white;
+            border-radius: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .co-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6a85b6, #e63946, #6a85b6);
+        }
+        
+        .co-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6a85b6, #e63946, #6a85b6);
+        }
+
+        .co-photo {
+            flex: 0 0 30%;
+            max-width: 300px;
+            margin-right: 40px;
+            margin-bottom: 20px;
+        }
+
+        .co-photo img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .co-message {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .co-message h2 {
+            color: #e63946;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e63946;
+            font-size: 28px;
+        }
+
+        .co-name {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #14213d;
+        }
+
+        .co-designation {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+       
+
+        @media (max-width: 768px) {
+            .co-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .co-photo {
+                margin-right: 0;
+            }
+            
+            .staff-card {
+                flex: 0 0 calc(50% - 30px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .staff-card {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <HEADER>
+ 
+   
+        <div class="top-header">
+          <div class="logo-container">
+            <a href="index.html">
+              <img src="NCC logo1.png" alt="NCC Logo"> 
+              </a>
+              <div class="logo-text">
+                  <h1>राष्ट्रीय कैडेट कोर | National Cadet Corps</h1>
+                  <p>3 Kar Engr COY, Bellary Group, Kar&Goa Directrate, Davangere</p>
+              </div>
+          </div>
+          <div class="right-logo">
+              <img src="NCC logo2.png" alt="Right Logo">
+          </div>
+      </div>
+      
+      <!-- Main Navigation -->
+      <nav class="main-nav">
+          <div class="site-info">
+              <div class="site-title">GM Institue of Technology</div>
+              
+          </div>
+  
+          <nav class="main-nav">
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <!-- About NCC -->
+                <div class="nav-item">
+                    <a href="#ncc-container" class="nav-link">About NCC</a>
+                </div>
+                
+                <!-- Activities -->
+                <div class="nav-item">
+                    <a href="annualreport.html" class="nav-link">Annual Report</a>
+                </div>
+                
+                <!-- Unit -->
+                <div class="nav-item">
+                    <a href="unit.html" class="nav-link">Unit</a>
+                    
+                </div>
+                
+                <!-- HEAD -->
+                <div class="nav-item">
+                    <a href="head.html" class="nav-link">HEAD</a>
+                </div>
+                
+                <!-- EX-CADETS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">EX-CADETS</a>
+                    <div class="dropdown">
+                        <a href="Batch-24.html">Batch-24</a>
+                        <a href="Batch-25.html">Batch-25</a>
+                    </div>
+                </div>
+                
+                <!-- CADETS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">CADETS</a>
+                    <div class="dropdown">
+                      <a href="Batch-26.html">Batch-26</a>
+                      <a href="Batch-27.html">Batch-27</a>
+                    </div>
+                </div>
+                
+  
+  
+  
+                <BR>
+                <!-- ACHIEVEMENTS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">ACHIEVEMENTS</a>
+                    <div class="dropdown">
+                        <a href="clg_achivements.html">College</a>
+                        <a href="unit_achivements.html">Unit</a>
+                        <a href="camp_achivements.html">Camp</a>
+                    </div>
+                </div>
+                
+                <!-- TRAINING CAMPS -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">TRAINING</a>
+                    <div class="dropdown">
+                        <a href="certificates.html">Certificates</a>
+                        <a href="camps.html">Camps</a>
+                    </div>
+                </div>
+                
+               
+                <!-- RULES & REGULATIONS -->
+                <div class="nav-item">
+                    <a href="terms.html" class="nav-link"> T & C</a>
+              
+                </div>
+              
+                
+                <!-- NCC OFFICE -->
+                <div class="nav-item">
+                    <a href="#" class="nav-link">NCC OFFICE</a>
+                </div>
+  
+                <div class="nav-item">
+                    <a href="#footer-column" class="nav-link">Contact us</a>
+                </div>
+            </div>
+  
+        </nav>
+      
+    </HEADER>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+      <div class="footer-content">
+          <div class="footer-column">
+              <h3>GMIT NCC Unit</h3>
+              <p>The pride of GM Institute of Technology, training cadets to become responsible citizens and future leaders of India.</p>
+              <div class="social-icons">
+                  <a href="https://www.instagram.com/gmit_ncc_24?igsh=aGdrbzVhcTJ5dzBl"target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+          
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul class="footer-links">
+                  <li><a href="#">Back to top</a></li>
+                  <li><a href="gallery.html"target="_blank">Gallery</a></li>
+                  <li><a href="https://indiancc.nic.in/"target="_blank">NCC official Website</a></li>
+                  <li><a href="https://www.gmit.ac.in/" target="_blank">GMIT Website</a></li>
+
+              </ul>
+          </div>
+          
+          <div class="footer-column" id="footer-column">
+              <h3>Contact Information</h3>
+              <ul class="contact-info">
+                  <li>
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>GM Institute of Technology ,<br>P.B. Road, Davanagere,<br>Davangere - 577006, Karnataka</span>
+                  </li>
+                  <li>
+                      <i class="fas fa-phone"></i>
+                      <span>+91 9738586827</span>
+                  </li>
+                  <li>
+                      <i class="fas fa-envelope"></i>
+                      <span>gmitncc2024@gmail.com</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      
+      <div class="footer-bottom">
+          <p>&copy; 2025 GMIT NCC Unit. All Rights Reserved.</p>
+          <p class="love-text">Designed and Developed with <span class="heart">❤</span> <a href="developer.html">Love</a></p>
+      </div>
+  </footer>
+
+<script>
+// Tab functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+button.addEventListener('click', () => {
+  tabButtons.forEach(btn => btn.classList.remove('active'));
+  tabContents.forEach(content => content.classList.remove('active'));
+
+  button.classList.add('active');
+  document.getElementById(button.dataset.tab).classList.add('active');
+});
+});
+
+// Accordion functionality
+const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach((btn) => {
+btn.addEventListener('click', () => {
+  btn.classList.toggle('active');
+  const panel = btn.nextElementSibling;
+
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+    panel.classList.remove('open');
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    panel.classList.add('open');
+  }
+});
+});
+</script>
+</body>
+</html>
+
+  
+     
+        </div>
+    </div>
+</body>
+</html>
